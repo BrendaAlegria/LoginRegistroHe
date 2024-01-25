@@ -1,21 +1,17 @@
-import Image from 'next/image'
 import Link from 'next/link'
+import styles from "@/styles/styles.module.css"
+import Footer from '@/components/Footer'
+import Counter from '@/components/Counter'
+import Login from '@/components/Login'
+import IndexPage from '@/components/IndexPage'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <ul>
-        <li>
-          <Link href="/">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link href="/pages/test">
-            Test
-          </Link>
-        </li>
-      </ul>
-    </main>
+    <div className="styles.container">
+    <Footer/>
+    <IndexPage/>
+
+    </div>
+
   )
 }
