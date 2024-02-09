@@ -7,6 +7,8 @@ export default function Info() {
       <h1 className={styles.pageTitle}>Bienvenido a la Página de Ayuda....</h1>
 
       <div className={styles.imageContainer}>
+        <img src="public/harry1.jpg" alt="" className={styles.pageImage} />
+        <img src="public/harry2.jpg" alt="" className={styles.pageImage} />
 
         {/* Agrega más imágenes según sea necesario */}
       </div>

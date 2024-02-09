@@ -1,38 +1,62 @@
 "use client"
 import { useState } from "react";
 import Login from "./Login";
-//import formStyles from "@/styles/formStyles.module.css" 
+import Register from "./Registro";
 
-const IndexPage=()=>{
+const IndexPage = () =>{
 
-    const [showLogin,setShowLogin]=useState(false)
-    const [showRegistro,setShowRegistro]=useState(false)
+    const [showLogin, setShowLogin] = useState(false);
+    const [showRegister, setShowRegister] = useState (false);
 
-    const handleLoginClick =()=>{
-        setShowLogin(true)
+    const handleLoginClick = () =>{
+        setShowLogin(true);
     }
-    const handleRegistroClick =()=>{
-        setShowRegistro(true)
+
+    const handleRegisterClick = () =>{
+        setShowRegister(true);
     }
-    const handleCloseLogin=()=>{
-        setShowLogin(false)
+
+    const handleCloseLogin = () =>{
+        setShowLogin(false);
     }
-        return(
-        <div>
-            <center>
-            <h1>INICIAR SESION Y REGISTRARSE </h1>
+
+    const handleCloseRegister = () =>{
+        setShowRegister(false);
+    }
+
+    return(
+        <center>
             <br></br>
-            <button onClick={handleLoginClick}>Iniciar Sesion</button>
+            <div>
+                <h1>Iniciar Sesion y Registrarse </h1>
+            <br/>
             <br></br>
             <br></br>
-            <button onClick={handleRegistroClick}>Registro</button>
+            <br></br>
+            <button onClick={handleLoginClick}>Iniciar sesion</button>
+            {showLogin && <Login onClose={handleCloseLogin} />}
+            <br/><br/>
+            <button onClick={handleRegisterClick}>Registro</button>
+            {showRegister && <Register onClose={handleCloseRegister} />}
             <br></br>
             <br></br>
-            {showLogin && <Login onClose={handleCloseLogin}/>}
-            </center>
-            
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
         </div>
+        </center>
+        
     )
-
 }
+
 export default IndexPage;
